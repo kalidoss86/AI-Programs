@@ -20,15 +20,9 @@ namespace MLSample
         static void Main(string[] args)
         {
             var selection = new TournamentSelection();
-            //var selection = new EliteSelection();
-            
-            //var crossover = new OnePointCrossover(0);
-            //var crossover = new OrderedCrossover();
             var crossover = new OrderBasedCrossover();
             var mutation = new ReverseSequenceMutation();
-            //var mutation = new TworsMutation();
             var fitness = new SortFitness();
-            //var chromosomes = new MyProblemChromosomes(10);
             var chromosomes = new SortChromosomes();
             var population = new Population(40, 40, chromosomes);
 
