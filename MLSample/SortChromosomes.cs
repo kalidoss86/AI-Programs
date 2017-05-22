@@ -12,7 +12,6 @@ namespace MLSample
 {
     public class SortChromosomes : ChromosomeBase
     {
-        //private int m_length;
         private const int MAX_CARD_IN_DECK = 13;
         public SortChromosomes() : base(MAX_CARD_IN_DECK)
         {
