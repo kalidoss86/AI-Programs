@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26304.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLSample", "MLSample\MLSample.csproj", "{13F2A348-4D8C-47F8-AD24-E48E3E0F13E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneticAlgorithmSorting", "MLSample\GeneticAlgorithmSorting.csproj", "{13F2A348-4D8C-47F8-AD24-E48E3E0F13E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
