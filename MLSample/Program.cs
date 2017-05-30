@@ -29,15 +29,13 @@ namespace MLSample
             var ga = new GeneticAlgorithm(population, fitness, selection, crossover, mutation);
             ga.Termination = new GenerationNumberTermination(100);
 
-
             Console.WriteLine("GA running...");
 
             ga.Start();
-            ga.GenerationRan += Ga_GenerationRan;
+
             Console.WriteLine("GA done in {0} generations.", ga.GenerationsNumber);
 
             var bestChromosome = ga.BestChromosome as SortChromosomes;
-            //Console.WriteLine("Best solution found is X:{0}, Y:{1} with {2} fitness.", bestChromosome.X, bestChromosome.Y, bestChromosome.Fitness);
 
             Console.WriteLine("Best solution found");
 
@@ -50,7 +48,7 @@ namespace MLSample
             var deck = (chromosome as SortChromosomes).CardDeck;
             var diff = deck.Zip(deck.Skip(1), (x, y) => Math.Abs(Convert.ToInt32(x.Value) - Convert.ToInt32(y.Value)));
 
-            var fitness = 1.0 - (diff.Sum() / (13.0 * 1000.0));
+            var fitness = 1.0 - (diff.Sum() / (13.0 * 10.0));
 
             if (fitness < 0)
             {
@@ -65,11 +63,6 @@ namespace MLSample
                 Console.Write(val.Value);
                 Console.Write(" ");
             }
-        }
-
-        private static void Ga_GenerationRan(object sender, EventArgs e)
-        {
-            Console.WriteLine("GenerationRan...");
         }
     }
 
